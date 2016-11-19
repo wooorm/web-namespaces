@@ -15,10 +15,10 @@ module, [uncompressed and compressed][releases].
 
 ## Usage
 
-Dependencies:
-
 ```javascript
 var webNamespaces = require('web-namespaces');
+
+console.log(webNamespaces);
 ```
 
 Yields:
