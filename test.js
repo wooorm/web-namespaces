@@ -2,7 +2,7 @@
 
 var assert = require('assert');
 var test = require('tape');
-var webNamespaces = require('./index.js');
+var webNamespaces = require('./');
 
 test('webNamespaces', function (t) {
   t.equal(typeof webNamespaces, 'object', 'should be an `object`');

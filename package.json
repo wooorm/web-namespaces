@@ -17,8 +17,8 @@
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
   ],
+  "main": "index.json",
   "files": [
-    "index.js",
     "index.json"
   ],
   "dependencies": {},
@@ -36,7 +36,7 @@
   "scripts": {
     "build-md": "remark . --quiet --frail --output",
     "build-crawl": "node build",
-    "build-bundle": "browserify index.js --bare -s webNamespaces > web-namespaces.js",
+    "build-bundle": "browserify index.json --bare -s webNamespaces > web-namespaces.js",
     "build-mangle": "esmangle web-namespaces.js > web-namespaces.min.js",
     "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
     "lint": "xo",
