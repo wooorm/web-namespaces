@@ -11,20 +11,17 @@
     "whatwg",
     "w3c"
   ],
-  "dependencies": {},
-  "files": [
-    "index.js",
-    "index.json"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wooorm/web-namespaces.git"
-  },
+  "repository": "https://github.com/wooorm/web-namespaces",
   "bugs": "https://github.com/wooorm/web-namespaces/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
   ],
+  "files": [
+    "index.js",
+    "index.json"
+  ],
+  "dependencies": {},
   "devDependencies": {
     "bail": "^1.0.0",
     "browserify": "^13.0.0",
