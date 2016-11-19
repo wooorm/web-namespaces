@@ -1,4 +1,4 @@
-# web-namespaces [![Build Status][build-badge]][build-page] [![Coverage Status][coverage-badge]][coverage-page]
+# web-namespaces [![Build Status][build-badge]][build-page]
 
 Map of web namespaces.
 
@@ -47,10 +47,6 @@ Yields:
 [build-badge]: https://img.shields.io/travis/wooorm/web-namespaces.svg
 
 [build-page]: https://travis-ci.org/wooorm/web-namespaces
-
-[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/web-namespaces.svg
-
-[coverage-page]: https://codecov.io/github/wooorm/web-namespaces?branch=master
 
 [npm]: https://docs.npmjs.com/cli/install
 
