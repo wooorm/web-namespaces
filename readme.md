@@ -10,9 +10,6 @@ Map of web namespaces.
 npm install web-namespaces
 ```
 
-**web-namespaces** is also available as an AMD, CommonJS, and globals
-module, [uncompressed and compressed][releases].
-
 ## Usage
 
 ```javascript
@@ -49,8 +46,6 @@ Yields:
 [build-page]: https://travis-ci.org/wooorm/web-namespaces
 
 [npm]: https://docs.npmjs.com/cli/install
-
-[releases]: https://github.com/wooorm/web-namespaces/releases
 
 [license]: LICENSE
 
