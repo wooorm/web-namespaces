@@ -25,8 +25,8 @@
   "devDependencies": {
     "bail": "^1.0.0",
     "browserify": "^13.0.0",
-    "cheerio": "^0.20.0",
     "esmangle": "^1.0.1",
+    "jsdom": "^9.8.3",
     "nyc": "^9.0.1",
     "remark-cli": "^2.0.0",
     "remark-preset-wooorm": "^1.0.0",
@@ -35,7 +35,7 @@
   },
   "scripts": {
     "build-md": "remark . --quiet --frail --output",
-    "build-crawl": "node script/build.js",
+    "build-crawl": "node build",
     "build-bundle": "browserify index.js --bare -s webNamespaces > web-namespaces.js",
     "build-mangle": "esmangle web-namespaces.js > web-namespaces.min.js",
     "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
