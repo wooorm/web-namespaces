@@ -28,9 +28,9 @@
     "esmangle": "^1.0.1",
     "jsdom": "^9.8.3",
     "remark-cli": "^3.0.0",
-    "remark-preset-wooorm": "^2.0.0",
+    "remark-preset-wooorm": "^3.0.0",
     "tape": "^4.4.0",
-    "xo": "^0.17.1"
+    "xo": "^0.18.0"
   },
   "scripts": {
     "build-md": "remark . -qfo",
@@ -44,11 +44,14 @@
   },
   "xo": {
     "space": true,
+    "esnext": false,
     "ignore": [
       "web-namespaces.js"
     ]
   },
   "remarkConfig": {
-    "plugins": ["preset-wooorm"]
+    "plugins": [
+      "preset-wooorm"
+    ]
   }
 }
