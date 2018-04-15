@@ -11,7 +11,7 @@
     "whatwg",
     "w3c"
   ],
-  "repository": "https://github.com/wooorm/web-namespaces",
+  "repository": "wooorm/web-namespaces",
   "bugs": "https://github.com/wooorm/web-namespaces/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
