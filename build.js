@@ -8,7 +8,7 @@ var unified = require('unified');
 var parse = require('rehype-parse');
 var q = require('hast-util-select');
 var toString = require('hast-util-to-string');
-var map = require('./');
+var map = require('.');
 
 https.get('https://infra.spec.whatwg.org/#html-namespace', function (res) {
   res.pipe(concat(onconcat)).on('error', bail);
