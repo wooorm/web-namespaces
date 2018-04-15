@@ -3,3 +3,4 @@
 node_modules/
 web-namespaces.js
 web-namespaces.min.js
+yarn.lock
