@@ -13,9 +13,9 @@ npm install web-namespaces
 ## Usage
 
 ```javascript
-var webNamespaces = require('web-namespaces');
+var webNamespaces = require('web-namespaces')
 
-console.log(webNamespaces);
+console.log(webNamespaces)
 ```
 
 Yields:
