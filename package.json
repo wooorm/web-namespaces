@@ -40,8 +40,8 @@
   "scripts": {
     "generate": "node build",
     "format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
-    "build-bundle": "browserify . -s webNamespaces -o web-namespaces.js",
-    "build-mangle": "browserify . -s webNamespaces -p tinyify -o web-namespaces.min.js",
+    "build-bundle": "browserify index.json -s webNamespaces -o web-namespaces.js",
+    "build-mangle": "browserify index.json -s webNamespaces -p tinyify -o web-namespaces.min.js",
     "build": "npm run build-bundle && npm run build-mangle",
     "lint": "xo",
     "test-api": "node test",
