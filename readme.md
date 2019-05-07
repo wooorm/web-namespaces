@@ -1,4 +1,8 @@
-# web-namespaces [![Build Status][build-badge]][build-page]
+# web-namespaces
+
+[![Build][build-badge]][build]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
 
 Map of web namespaces.
 
@@ -58,7 +62,15 @@ Yields:
 
 [build-badge]: https://img.shields.io/travis/wooorm/web-namespaces.svg
 
-[build-page]: https://travis-ci.org/wooorm/web-namespaces
+[build]: https://travis-ci.org/wooorm/web-namespaces
+
+[downloads-badge]: https://img.shields.io/npm/dm/web-namespaces.svg
+
+[downloads]: https://www.npmjs.com/package/web-namespaces
+
+[size-badge]: https://img.shields.io/bundlephobia/minzip/web-namespaces.svg
+
+[size]: https://bundlephobia.com/result?p=web-namespaces
 
 [npm]: https://docs.npmjs.com/cli/install
 
