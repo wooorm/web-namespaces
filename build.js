@@ -14,8 +14,8 @@ var proc = unified().use(parse)
 
 https.get('https://infra.spec.whatwg.org/#html-namespace', onconnection)
 
-function onconnection(res) {
-  res.pipe(concat(onconcat)).on('error', bail)
+function onconnection(response) {
+  response.pipe(concat(onconcat)).on('error', bail)
 }
 
 function onconcat(buf) {
