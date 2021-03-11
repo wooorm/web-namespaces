@@ -1,6 +1,7 @@
 # web-namespaces
 
 [![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
@@ -60,9 +61,13 @@ Yields:
 
 <!-- Definition -->
 
-[build-badge]: https://img.shields.io/travis/wooorm/web-namespaces.svg
+[build-badge]: https://github.com/wooorm/web-namespaces/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/wooorm/web-namespaces
+[build]: https://github.com/wooorm/web-namespaces/actions
+
+[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/web-namespaces.svg
+
+[coverage]: https://codecov.io/github/wooorm/web-namespaces
 
 [downloads-badge]: https://img.shields.io/npm/dm/web-namespaces.svg
 
