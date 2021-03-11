@@ -1,14 +1,12 @@
-'use strict'
-
-var fs = require('fs')
-var https = require('https')
-var bail = require('bail')
-var concat = require('concat-stream')
-var unified = require('unified')
-var parse = require('rehype-parse')
-var q = require('hast-util-select')
-var toString = require('hast-util-to-string')
-var map = require('.')
+import fs from 'fs'
+import https from 'https'
+import bail from 'bail'
+import concat from 'concat-stream'
+import unified from 'unified'
+import parse from 'rehype-parse'
+import q from 'hast-util-select'
+import toString from 'hast-util-to-string'
+import {webNamespaces} from './index.js'
 
 var proc = unified().use(parse)
 
@@ -34,7 +32,7 @@ function onconcat(buf) {
       if (q.matches('p', node)) {
         name = q.select('dfn', node).properties.id
         data = toString(q.select('code', node))
-        map[name.slice(0, name.indexOf('-'))] = data
+        webNamespaces[name.slice(0, name.indexOf('-'))] = data
       } else if (node.type === 'element') {
         break
       }
@@ -43,5 +41,10 @@ function onconcat(buf) {
     }
   }
 
-  fs.writeFileSync('index.json', JSON.stringify(map, null, 2) + '\n')
+  fs.writeFileSync(
+    'index.js',
+    'export var webNamespaces = ' +
+      JSON.stringify(webNamespaces, null, 2) +
+      '\n'
+  )
 }

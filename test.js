@@ -1,8 +1,6 @@
-'use strict'
-
-var assert = require('assert')
-var test = require('tape')
-var webNamespaces = require('.')
+import assert from 'assert'
+import test from 'tape'
+import {webNamespaces} from './index.js'
 
 var own = {}.hasOwnProperty
 

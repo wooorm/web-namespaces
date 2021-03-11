@@ -9,6 +9,9 @@ Map of web namespaces.
 
 ## Install
 
+This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
+instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -18,7 +21,7 @@ npm install web-namespaces
 ## Use
 
 ```js
-var webNamespaces = require('web-namespaces')
+import {webNamespaces} from 'web-namespaces'
 
 console.log(webNamespaces)
 ```
@@ -36,9 +39,12 @@ Yields:
 
 ## API
 
+This package exports the following identifiers: `webNamespaces`.
+There is no default export.
+
 ### `webNamespaces`
 
-`Object.<string, string>` — Map of short-name to namespaces.
+`Record.<string, string>` — Map of name to namespaces.
 
 ## Related
 
