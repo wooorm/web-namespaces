@@ -2,13 +2,13 @@ import assert from 'node:assert'
 import test from 'tape'
 import {webNamespaces} from './index.js'
 
-var own = {}.hasOwnProperty
+const own = {}.hasOwnProperty
 
 test('webNamespaces', function (t) {
   t.equal(typeof webNamespaces, 'object', 'should be an `object`')
 
   t.doesNotThrow(function () {
-    var key
+    let key
 
     for (key in webNamespaces) {
       if (own.call(webNamespaces, key)) {
