@@ -7,15 +7,51 @@
 
 Map of web namespaces.
 
+## Contents
+
+*   [What is this?](#what-is-this)
+*   [When should I use this?](#when-should-i-use-this)
+*   [Install](#install)
+*   [Use](#use)
+*   [API](#api)
+    *   [`webNamespaces`](#webnamespaces)
+*   [Types](#types)
+*   [Compatibility](#compatibility)
+*   [Security](#security)
+*   [Related](#related)
+*   [Contribute](#contribute)
+*   [License](#license)
+
+## What is this?
+
+This is a map of names to namespaces found on the web platforms.
+
+## When should I use this?
+
+You can use this package if you want to access the XML, HTML, SVG, etc.
+namespace urls.
+
 ## Install
 
-This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
-instead of `require`d.
-
-[npm][]:
+This package is [ESM only][esm].
+In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
 
 ```sh
 npm install web-namespaces
+```
+
+In Deno with [Skypack][]:
+
+```js
+import {webNamespaces} from 'https://cdn.skypack.dev/web-namespaces@2?dts'
+```
+
+In browsers with [Skypack][]:
+
+```html
+<script type="module">
+  import {webNamespaces} from 'https://cdn.skypack.dev/web-namespaces@2?min'
+</script>
 ```
 
 ## Use
@@ -46,22 +82,42 @@ There is no default export.
 
 ### `webNamespaces`
 
-`Record.<string, string>` — Map of name to namespaces.
+Map of names to namespaces (`Record<string, string>`).
+
+## Types
+
+This package is fully typed with [TypeScript][].
+There are no extra exported types.
+
+## Compatibility
+
+This package is at least compatible with all maintained versions of Node.js.
+As of now, that is Node.js 12.20+, 14.14+, and 16.0+.
+It also works in Deno and modern browsers.
+
+## Security
+
+This package is safe.
 
 ## Related
 
-*   [`html-tag-names`](https://github.com/wooorm/html-tag-names)
-    — List of HTML tags
-*   [`mathml-tag-names`](https://github.com/wooorm/mathml-tag-names)
-    — List of MathML tags
-*   [`svg-tag-names`](https://github.com/wooorm/svg-tag-names)
-    — List of SVG tags
-*   [`svg-element-attributes`](https://github.com/wooorm/svg-element-attributes)
-    — Map of SVG elements to allowed attributes
-*   [`html-element-attributes`](https://github.com/wooorm/html-element-attributes)
-    — Map of HTML elements to allowed attributes
-*   [`aria-attributes`](https://github.com/wooorm/aria-attributes)
-    — List of ARIA attributes
+*   [`wooorm/html-tag-names`](https://github.com/wooorm/html-tag-names)
+    — list of HTML tag names
+*   [`wooorm/mathml-tag-names`](https://github.com/wooorm/mathml-tag-names)
+    — list of MathML tag names
+*   [`wooorm/svg-tag-names`](https://github.com/wooorm/svg-tag-names)
+    — list of SVG tag names
+*   [`wooorm/svg-element-attributes`](https://github.com/wooorm/svg-element-attributes)
+    — map of SVG elements to allowed attributes
+*   [`wooorm/html-element-attributes`](https://github.com/wooorm/html-element-attributes)
+    — map of HTML elements to allowed attributes
+*   [`wooorm/aria-attributes`](https://github.com/wooorm/aria-attributes)
+    — list of ARIA attributes
+
+## Contribute
+
+Yes please!
+See [How to Contribute to Open Source][contribute].
 
 ## License
 
@@ -87,6 +143,14 @@ There is no default export.
 
 [npm]: https://docs.npmjs.com/cli/install
 
+[skypack]: https://www.skypack.dev
+
 [license]: license
 
 [author]: https://wooorm.com
+
+[esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
+
+[typescript]: https://www.typescriptlang.org
+
+[contribute]: https://opensource.guide/how-to-contribute/
