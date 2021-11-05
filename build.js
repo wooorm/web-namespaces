@@ -1,11 +1,11 @@
-import fs from 'fs'
-import https from 'https'
-import bail from 'bail'
+import fs from 'node:fs'
+import https from 'node:https'
+import {bail} from 'bail'
 import concat from 'concat-stream'
-import unified from 'unified'
+import {unified} from 'unified'
 import parse from 'rehype-parse'
-import q from 'hast-util-select'
-import toString from 'hast-util-to-string'
+import {matches, select} from 'hast-util-select'
+import {toString} from 'hast-util-to-string'
 import {webNamespaces} from './index.js'
 
 var proc = unified().use(parse)
@@ -17,7 +17,7 @@ function onconnection(response) {
 }
 
 function onconcat(buf) {
-  var nodes = q.select('main', proc.parse(buf)).children
+  var nodes = select('main', proc.parse(buf)).children
   var length = nodes.length
   var index = -1
   var found
@@ -29,14 +29,14 @@ function onconcat(buf) {
     node = nodes[index]
 
     if (found) {
-      if (q.matches('p', node)) {
-        name = q.select('dfn', node).properties.id
-        data = toString(q.select('code', node))
+      if (matches('p', node)) {
+        name = String(select('dfn', node).properties.id || '')
+        data = toString(select('code', node))
         webNamespaces[name.slice(0, name.indexOf('-'))] = data
       } else if (node.type === 'element') {
         break
       }
-    } else if (q.matches('#namespaces', node)) {
+    } else if (matches('#namespaces', node)) {
       found = true
     }
   }
