@@ -8,6 +8,7 @@ test('webNamespaces', function (t) {
   t.equal(typeof webNamespaces, 'object', 'should be an `object`')
 
   t.doesNotThrow(function () {
+    /** @type {string} */
     let key
 
     for (key in webNamespaces) {
