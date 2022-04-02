@@ -40,17 +40,17 @@ In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
 npm install web-namespaces
 ```
 
-In Deno with [Skypack][]:
+In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import {webNamespaces} from 'https://cdn.skypack.dev/web-namespaces@2?dts'
+import {webNamespaces} from 'https://esm.sh/web-namespaces@2'
 ```
 
-In browsers with [Skypack][]:
+In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import {webNamespaces} from 'https://cdn.skypack.dev/web-namespaces@2?min'
+  import {webNamespaces} from 'https://esm.sh/web-namespaces@2?bundle'
 </script>
 ```
 
@@ -143,7 +143,7 @@ See [How to Contribute to Open Source][contribute].
 
 [npm]: https://docs.npmjs.com/cli/install
 
-[skypack]: https://www.skypack.dev
+[esmsh]: https://esm.sh
 
 [license]: license
 
